@@ -5,7 +5,7 @@ metadata:
   labels:
     app: {{ .Values.redisReplica.service.labels.app }}
     tier: {{ .Values.redisReplica.service.labels.tier }}
-    role: {{ .Values.redisReplica.service.lables.role }}
+    role: {{ .Values.redisReplica.service.labels.role }}
 spec:
   ports:
   - port: {{ .Values.redisReplica.service.port }}
