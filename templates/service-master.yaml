@@ -8,8 +8,8 @@ metadata:
     role: {{ .Values.redisMaster.service.labels.role }}
 spec:
   ports:
-  - port: {{ .Values.redisMaster.service.port }}
-    targetPort: {{ .Values.redisMaster.service.targetPort }}
+  - port: {{ .Values.redisMaster.service.ports.port }}
+    targetPort: {{ .Values.redisMaster.service.ports.targetPort }}
   selector:
     app: {{ .Values.redisMaster.service.selector.app }}
     tier: {{ .Values.redisMaster.service.selector.tier }}
