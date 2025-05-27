@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.redisReplica.service.name }}
+  labels:
+    app: {{ .Values.redisReplica.service.labels.app }}
+    tier: {{ .Values.redisReplica.service.labels.tier }}
+    role: {{ .Values.redisReplica.service.lables.role }}
+spec:
+  ports:
+  - port: {{ .Values.redisReplica.service.port }}
+  selector:
+    app: {{ .Values.redisReplica.service.selector.app }}
+    tier: {{ .Values.redisReplica.service.selector.tier }}
+    role: {{ .Values.redisReplica.service.selector.role }}
