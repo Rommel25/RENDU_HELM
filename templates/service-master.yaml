@@ -5,7 +5,7 @@ metadata:
   labels:
     app: {{ .Values.redisMaster.service.labels.app }}
     tier: {{ .Values.redisMaster.service.labels.tier }}
-    role: {{ .Values.redisMaster.service.lables.role }}
+    role: {{ .Values.redisMaster.service.labels.role }}
 spec:
   ports:
   - port: {{ .Values.redisMaster.service.port }}
