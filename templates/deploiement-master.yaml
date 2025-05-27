@@ -25,4 +25,3 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: {{ .Values.redisMaster.deploiement.template.containers.ports.containerPort }}
----
