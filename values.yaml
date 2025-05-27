@@ -33,14 +33,14 @@ redisMaster:
         tier: backend
       containers:
         name: master
-        image: registry.k8s.io/redis:e2e
+        image: redis
         ports:
           containerPort: 6379
     frontend:
       name: frontend
 redisReplica:
   service:
-    name: redis-replica
+    name: redis-follower
     port: 6379
     labels:
       app: redis
