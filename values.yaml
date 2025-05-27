@@ -9,8 +9,9 @@ replicaCount: 1
 redisMaster:
   service:
     name: redis-master
-    port: 6379
-    targetPort: 6379
+    ports:
+      port: 6379
+      targetPort: 6379
     labels:
       app: redis
       tier: backend
